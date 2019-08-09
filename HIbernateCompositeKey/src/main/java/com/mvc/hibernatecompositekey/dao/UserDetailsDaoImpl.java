@@ -24,7 +24,7 @@ public class UserDetailsDaoImpl implements UserDetailsDao {
 
         entityManager.getTransaction().begin();
         entityManager.persist(user);
-        System.out.println("########### Created");
+        
         entityManager.getTransaction().commit();
 
     }

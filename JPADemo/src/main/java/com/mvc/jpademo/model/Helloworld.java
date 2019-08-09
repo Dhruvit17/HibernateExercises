@@ -16,6 +16,7 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 
 /**
  *
@@ -61,7 +62,7 @@ public class Helloworld implements Serializable {
 
     @Override
     public String toString() {
-        return "com.mvc.jpademo.model.Helloworld[ id=" + id + " ]";
+        return ReflectionToStringBuilder.toString(this);
     }
     
 }

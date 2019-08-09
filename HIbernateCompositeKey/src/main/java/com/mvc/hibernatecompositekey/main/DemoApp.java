@@ -8,6 +8,8 @@ package com.mvc.hibernatecompositekey.main;
 import com.mvc.hibernatecompositekey.dao.UserDetailsDao;
 import com.mvc.hibernatecompositekey.dao.UserDetailsDaoImpl;
 import com.mvc.hibernatecompositekey.model.UserDetails;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -19,9 +21,10 @@ public class DemoApp {
         
         
         
-        UserDetails user = new UserDetails("Dhruvit", "dhruvit@gmail.com", "1234567890");
+        UserDetails user = new UserDetails("Janam", "janam@gmail.com", "1234567890");
         repository.addUser(user);
         
-        System.out.println("\n\n"+repository.getUsers()+"\n\n");
+        List<UserDetails> getUsers = new ArrayList<UserDetails>();
+        getUsers=repository.getUsers();
     }
 }

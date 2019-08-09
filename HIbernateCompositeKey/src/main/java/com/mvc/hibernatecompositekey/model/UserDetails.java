@@ -16,6 +16,8 @@ import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 import javax.validation.constraints.NotNull;
 
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+
 
 /**
  *
@@ -89,7 +91,7 @@ public class UserDetails implements Serializable{
 
     @Override
     public String toString() {
-        return "UserDetails{" + "id=" + id + ", name=" + name + ", email=" + email + ", phone=" + phone + '}';
+        return ReflectionToStringBuilder.toString(this);
     }
     
     

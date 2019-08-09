@@ -7,6 +7,7 @@ package com.mvc.hibernatenativeapi.main;
 
 import com.mvc.hibernatenativeapi.dao.HelloworldDao;
 import com.mvc.hibernatenativeapi.model.Helloworld;
+import static com.sun.xml.internal.ws.spi.db.BindingContextFactory.LOGGER;
 import java.util.List;
 import java.util.Scanner;
 
@@ -22,15 +23,15 @@ public class DemoApp {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter message:");
+        
         String msg = sc.next();
 
         Helloworld helloWorld = new Helloworld(msg);
         helloWorldDao.saveMessage(helloWorld);
-        System.out.println("Message added..");
+        
 
         List<Helloworld> messages = helloWorldDao.getMessage();
-        messages.forEach(s -> System.out.println(s.getMessage()));
+        messages.forEach(s -> LOGGER.info(s.getMessage()));
 
     }
 }

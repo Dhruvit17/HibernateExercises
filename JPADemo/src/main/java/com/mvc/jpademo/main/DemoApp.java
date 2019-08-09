@@ -6,6 +6,7 @@
 package com.mvc.jpademo.main;
 
 import com.mvc.jpademo.model.Helloworld;
+import static com.sun.xml.internal.ws.spi.db.BindingContextFactory.LOGGER;
 import java.util.Scanner;
 
 /**
@@ -18,7 +19,7 @@ public class DemoApp {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter message:");
+        LOGGER.info("Enter message:");
         String msg = sc.next();
         
         crudOperations.insertEntity(msg);
