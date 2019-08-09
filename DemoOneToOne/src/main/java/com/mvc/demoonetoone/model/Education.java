@@ -65,6 +65,55 @@ public class Education implements Serializable {
         this.schoolName = schoolName;
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getDegreeType() {
+        return degreeType;
+    }
+
+    public void setDegreeType(String degreeType) {
+        this.degreeType = degreeType;
+    }
+
+    public String getDegreeDesc() {
+        return degreeDesc;
+    }
+
+    public void setDegreeDesc(String degreeDesc) {
+        this.degreeDesc = degreeDesc;
+    }
+
+    public Long getGraduationYear() {
+        return graduationYear;
+    }
+
+    public void setGraduationYear(Long graduationYear) {
+        this.graduationYear = graduationYear;
+    }
+
+    public String getSchoolName() {
+        return schoolName;
+    }
+
+    public void setSchoolName(String schoolName) {
+        this.schoolName = schoolName;
+    }
+
+    public Student getStudent() {
+        return student;
+    }
+
+    public void setStudent(Student student) {
+        this.student = student;
+    }
+
+    
     @Override
     public String toString() {
         return ReflectionToStringBuilder.toString(this);
