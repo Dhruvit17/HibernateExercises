@@ -3,3 +3,4 @@ HibernateNativeAPI/target
 JPADemo/target
 
 /DemoOneToOne/target/
+/DemoOneToMany/target/
